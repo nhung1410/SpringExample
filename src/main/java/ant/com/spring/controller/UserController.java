@@ -39,13 +39,20 @@ public class UserController {
 		return "user/info";
 	}
 	
+	
 	@RequestMapping("/admin-page")
 	public String showAdminPage( Model model) {
 		return "admin/dashboard";
 	}
 	
-	@RequestMapping("/sign-up-form")
+	@RequestMapping("/register-form")
 	public String showSignUpForm() {
-		return "user/signUp";
+		return "user/register";
 	}
+	@RequestMapping("/register")
+	public String SignUp() {
+		return "user/login-form";
+	}
+	
+	
 }
