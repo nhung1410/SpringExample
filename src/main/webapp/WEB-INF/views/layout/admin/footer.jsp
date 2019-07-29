@@ -1,12 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
-
-</body>
-</html>
+<div class="row">
+	<div class="col-md-12">
+		<div class="copyright">
+			<p>
+				Copyright © 2018 Colorlib. All rights reserved. Template by <a
+					href="https://colorlib.com">Colorlib</a>.
+			</p>
+		</div>
+	</div>
+</div>

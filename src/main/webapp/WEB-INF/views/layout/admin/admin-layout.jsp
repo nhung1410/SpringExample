@@ -59,9 +59,7 @@
 		<tiles:insertAttribute name="menu" />
 		<div class="page-container">
 			<tiles:insertAttribute name="header" />
-
-
-
+			<tiles:insertAttribute name="body" />
 		</div>
 	</div>
 </body>

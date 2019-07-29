@@ -40,5 +40,25 @@
 			value="/WEB-INF/views/layout/admin/header.jsp" />
 		<put-attribute name="menu"
 			value="/WEB-INF/views/layout/admin/menu.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/jsp/admin/dashboard/index/_dashboard.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/layout/admin/footer.jsp" />
+	</definition>
+	
+	<!-- PRODUCT PAGE -->
+	<definition name="product-list" extends="dashboard">
+		<put-attribute name="title" value="dashboard" />
+		<put-attribute name="body" value="/WEB-INF/views/jsp/admin/product/index/_list.jsp" />
+	</definition>
+	
+	<!-- PRODUCT INSERT -->
+	<definition name="product-insert" extends="dashboard">
+		<put-attribute name="title" value="dashboard" />
+		<put-attribute name="body" value="/WEB-INF/views/jsp/admin/product/index/_insert.jsp" />
+	</definition>
+	
+	<!-- PRODUCT TYPE -->
+	<definition name="productType-list" extends="dashboard">
+		<put-attribute name="title" value="dashboard" />
+		<put-attribute name="body" value="/WEB-INF/views/jsp/admin/productType/index/_list.jsp" />
 	</definition>
 </tiles-definitions>

@@ -11,9 +11,9 @@ import org.springframework.web.servlet.view.RedirectView;
 @Controller
 public class HomeController {
 	@RequestMapping(value="/", method = RequestMethod.GET)
-	public String page1() {
+	public String homepage() {
 //		return "user/home";
-		return "admin/dashboard";
+		return "admin/dashboard/dashboard";
 	}
 	@RequestMapping(value="/home", method = RequestMethod.GET)
 	public String home() {

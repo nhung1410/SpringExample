@@ -9,8 +9,7 @@
 <title>Dashboard</title>
 
 </head>
-<body>
+<body >
 	<tiles:insertDefinition name="dashboard" />
-
 </body>
 </html>
