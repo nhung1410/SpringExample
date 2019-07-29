@@ -1,5 +1,5 @@
 package ant.com.spring.entities;
-// Generated Jul 25, 2019 5:41:31 PM by Hibernate Tools 5.1.4.Final
+// Generated Jul 26, 2019 11:50:36 AM by Hibernate Tools 5.1.4.Final
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -17,12 +17,18 @@ public class Type implements java.io.Serializable {
 
 	private Integer id;
 	private String name;
+	private String brand;
 
 	public Type() {
 	}
 
-	public Type(String name) {
+	public Type(String brand) {
+		this.brand = brand;
+	}
+
+	public Type(String name, String brand) {
 		this.name = name;
+		this.brand = brand;
 	}
 
 	@Id
@@ -44,6 +50,15 @@ public class Type implements java.io.Serializable {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	@Column(name = "brand", nullable = false, length = 100)
+	public String getBrand() {
+		return this.brand;
+	}
+
+	public void setBrand(String brand) {
+		this.brand = brand;
 	}
 
 }

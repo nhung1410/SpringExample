@@ -29,13 +29,11 @@
 <script src="<c:url value="/resources/js/jquery.nice-select.min.js" />"></script>
 <script src="<c:url value="/resources/js/jquery.sticky.js" />"></script>
 <script src="<c:url value="/resources/js/nouislider.min.js" />"></script>
-<script src="<c:url value="/resources/js/countdown.js" />"></script>
 <script
 	src="<c:url value="/resources/js/jquery.magnific-popup.min.js" />"></script>
 <script src="<c:url value="/resources/js/owl.carousel.min.js" />"></script>
 <script src="<c:url value="/resources/js/gmaps.min.js" />"></script>
 <script src="<c:url value="/resources/js/main.js" />"></script>
-<script src="<c:url value="/resources/js/countdown.js" />"></script>
 <script src="<c:url value="/resources/js/popper.min.js" />"></script>
 <title><tiles:getAsString name="title" /></title>
 
