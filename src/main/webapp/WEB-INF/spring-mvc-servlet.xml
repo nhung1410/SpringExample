@@ -11,7 +11,7 @@
 
 	<context:annotation-config />
 	<context:component-scan
-		base-package="ant.com.spring" />
+		base-package="ant.com.spring.controller" />
 
 	<mvc:annotation-driven />
 	<mvc:resources mapping="/resources/**"

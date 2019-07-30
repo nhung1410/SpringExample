@@ -4,7 +4,7 @@
 		xmlns="http://java.sun.com/xml/ns/javaee"
 		xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 		version="2.5">
-		<display-name>SpringMVCHello</display-name>
+		<display-name>SpringExample</display-name>
 
 		<servlet>
 			<servlet-name>spring-mvc</servlet-name>
