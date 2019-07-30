@@ -18,7 +18,7 @@
                                 <i class="fas fa-users"></i>Customers management</a>
                         </li>
                         <li>
-                            <a href="">
+                            <a href="productType-list">
                                 <i class="	fas fa-boxes"></i>Product type management</a>
                         </li>
                         <li>

@@ -14,6 +14,7 @@
 <link rel="stylesheet" href="<c:url value="/resources/css/magnific-popup.css" />">
 </head>
 <body>
+	<tiles:insertDefinition name="index" />
 	
 
 </body>
