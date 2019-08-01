@@ -8,9 +8,9 @@
             </div>
             <div class="menu-sidebar__content js-scrollbar1">
                 <nav class="navbar-sidebar">
-                    <ul class="list-unstyled navbar__list">
+                    <ul class="list-unstyled navbar__list" >
                         <li>
-                            <a  href="dashboard">
+                            <a  href="dashboard" >
                                 <i class="fas fa-tachometer-alt"></i>Dashboard</a>
                         </li>
                         <li>
@@ -19,7 +19,7 @@
                         </li>
                         <li>
                             <a href="productType-list">
-                                <i class="	fas fa-boxes"></i>Product type management</a>
+                                <i class="	fas fa-boxes" ></i>Product type management</a>
                         </li>
                         <li>
                             <a href="list-product">

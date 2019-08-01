@@ -1,6 +1,6 @@
     <!-- HEADER DESKTOP-->
             <header class="header-desktop">
-                <div class="section__content section__content--p30  " style="padding-left: 800px">
+                <div class="section__content section__content--p30  " style="padding-left: 700px">
                
                     <div class="container-fluid">
                         <div class="header-wrap">

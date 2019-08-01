@@ -61,4 +61,16 @@
 		<put-attribute name="title" value="dashboard" />
 		<put-attribute name="body" value="/WEB-INF/views/jsp/admin/productType/index/_list.jsp" />
 	</definition>
+	
+	<!-- PRODUCT TYPE INSERT -->
+	<definition name="productType-insert" extends="dashboard">
+		<put-attribute name="title" value="dashboard" />
+		<put-attribute name="body" value="/WEB-INF/views/jsp/admin/productType/index/_insert.jsp"/>	
+	</definition>
+	
+	<!-- PRODUCT TYPE UPDATE -->
+	<definition name="productType-update" extends="dashboard">
+		<put-attribute name="title" value="dashboard" />
+		<put-attribute name="body" value="/WEB-INF/views/jsp/admin/productType/index/_update.jsp"/>	
+	</definition>
 </tiles-definitions>

@@ -68,11 +68,9 @@
 		<property name="maxUploadSize" value="268435456" />
 	</bean>
 
-	<bean
+ <bean
 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-		<property name="location">
-			<value>/resources/jdbc.properties</value>
-		</property>
+		<property name="location"  value="classpath:jdbc.properties" />
 	</bean>
 
   <bean id="entityManagerFactoryBean"
@@ -84,7 +82,7 @@
     <property name="jpaVendorAdapter">
       <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" />
     </property>
-    <property name="jpaProperties" value="/resources/hibernate.properties" />
+    <property name="jpaProperties" value="classpath:hibernate.properties" />
   </bean>
   
   <bean id="dataSource"
@@ -97,8 +95,8 @@
 
   <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
     <property name="entityManagerFactory" ref="entityManagerFactoryBean" />
-  </bean>
-<!--  <tx:annotation-driven transaction-manager="transactionManager" /> -->
+  </bean> 
+<!-- <tx:annotation-driven transaction-manager="transactionManager" />  -->
 
 	
 </beans>

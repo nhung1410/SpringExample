@@ -156,6 +156,7 @@ strong {
 /*                   ELEMENTS                          */
 /*-----------------------------------------------------*/
 /* ----- Title ----- */
+
 .title--sbold {
     font-weight: 600;
 }
@@ -1567,7 +1568,7 @@ section {
 }
 
 .menu-sidebar {
-    width: 342px;
+    width: 300px;
     position: fixed;
     left: 0;
     top: 0;
@@ -4602,12 +4603,12 @@ section {
     display: -webkit-flex;
     display: -moz-box;
     display: -ms-flexbox;
-    display: flex;
+    
     -webkit-box-pack: end;
-    -webkit-justify-content: flex-end;
+    
     -moz-box-pack: end;
     -ms-flex-pack: end;
-    justify-content: flex-end;
+    
 }
 
 .table-data-feature .item {

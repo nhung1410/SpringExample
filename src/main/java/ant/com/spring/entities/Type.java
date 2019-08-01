@@ -1,5 +1,5 @@
 package ant.com.spring.entities;
-// Generated Jul 26, 2019 11:50:36 AM by Hibernate Tools 5.1.4.Final
+// Generated Aug 1, 2019 5:10:34 PM by Hibernate Tools 4.3.1.Final
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

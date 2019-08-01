@@ -6,4 +6,5 @@
   <table-filter match-catalog="shop" match-name="product"/>
   <table-filter match-catalog="shop" match-name="type"/>
   <table-filter match-catalog="shop" match-name="user"/>
+  <table-filter match-schema="shop" match-name=".*"/>
 </hibernate-reverse-engineering>
