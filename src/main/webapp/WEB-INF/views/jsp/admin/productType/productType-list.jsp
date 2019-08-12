@@ -14,6 +14,8 @@
 								</button>
 							</a>
 						</div>
+						
+						<c:url value="/deleteProductType/" var="deleteProductType" />
 						<div class="table-data__tool-right">
 
 							<form class="form-header" action="" method="POST">
@@ -25,6 +27,7 @@
 							</form>
 						</div>
 					</div>
+
 					<div class="table-responsive table-responsive-data2">
 						<table class="table table-data2">
 							<thead>
@@ -40,6 +43,7 @@
 										<td>1</td>
 										<td class="desc">${type.name}</td>
 										<td>
+
 											<div class="table-data-feature">
 												<button class="item" data-toggle="tooltip"
 													data-placement="top" title="" data-original-title="Edit">
@@ -48,7 +52,7 @@
 												</button>
 												<button class="item" data-toggle="tooltip"
 													data-placement="top" title="" data-original-title="Delete">
-													<a href="deleteProductType/${type.id}"><i
+													<a href="${type.id}"><i
 														class="zmdi zmdi-delete"></i></a>
 												</button>
 											</div>

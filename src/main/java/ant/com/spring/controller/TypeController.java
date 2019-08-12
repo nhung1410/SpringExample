@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.view.RedirectView;
 
 import ant.com.spring.entities.Type;
 import ant.com.spring.service.ProductTypeService;
@@ -38,24 +39,22 @@ public class TypeController {
 	}
 	
 	@RequestMapping(value="/insertProductType")
-	public String doInsertType(@ModelAttribute("Type") Type type, Model model) {
+	public RedirectView doInsertType(@ModelAttribute("Type") Type type) {
 		typeService.save(type);
-		model.addAttribute("listType", typeService.findAll());
-		return "productType-list";
+		return new RedirectView("productType-list");
 	}
 	
-	@RequestMapping(value="/updateProductType", method=RequestMethod.POST)
-	public String doUpdateType(@ModelAttribute("Type") Type type, Model model) {
+	@RequestMapping(value="/updateProductType")
+	public RedirectView doUpdateType(@ModelAttribute("Type") Type type) {
 		typeService.update(type);
-		model.addAttribute("listType", typeService.findAll());
-		return "productType-list";
+		return new RedirectView("productType-list") ;
 	}
 	
-	@RequestMapping(value="/deleteProductType/{id}")
-	public String doDeleteType(@PathVariable int id, Model model) {
+	@RequestMapping(value="/{id}", method=RequestMethod.GET)
+	public String doDeleteType(@PathVariable int id) {
 		typeService.delete(id);
-		model.addAttribute("listType", typeService.findAll());
-		return "productType-list";
+		return "redirect:productType-list" ;
 	}
+	
 	
 }

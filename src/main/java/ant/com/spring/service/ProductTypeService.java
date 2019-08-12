@@ -31,15 +31,11 @@ public class ProductTypeService {
 	}
 
 	public void update(final Type type) {
-		try {
-			Type typeDB = typeDAO.findById(type.getId());
 
-			typeDB.setName(type.getName());
-			typeDAO.persist(typeDB);
+		Type typeDB = typeDAO.findById(type.getId());
 
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		typeDB.setName(type.getName());
+		typeDAO.persist(typeDB);
 
 	}
 
