@@ -1,11 +1,9 @@
 package ant.com.spring.entities;
-// Generated Aug 1, 2019 5:10:34 PM by Hibernate Tools 4.3.1.Final
+// Generated Aug 9, 2019 10:48:01 AM by Hibernate Tools 4.3.1.Final
 
 import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import static javax.persistence.GenerationType.IDENTITY;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
@@ -18,48 +16,48 @@ import javax.persistence.TemporalType;
 @Table(name = "product", catalog = "shop")
 public class Product implements java.io.Serializable {
 
-	private Integer id;
+	private int id;
 	private String name;
-	private byte[] img;
-	private int price;
-	private Date createDate;
-	private int typeId;
-	private Integer sale;
+	private Integer price;
+	private Integer typeId;
 	private Integer quantity;
+	private Integer sale;
+	private String imgMain;
+	private String img;
+	private Date createdDate;
 
 	public Product() {
 	}
 
-	public Product(String name, int price, Date createDate, int typeId) {
-		this.name = name;
-		this.price = price;
-		this.createDate = createDate;
-		this.typeId = typeId;
-	}
-
-	public Product(String name, byte[] img, int price, Date createDate, int typeId, Integer sale, Integer quantity) {
-		this.name = name;
-		this.img = img;
-		this.price = price;
-		this.createDate = createDate;
-		this.typeId = typeId;
-		this.sale = sale;
-		this.quantity = quantity;
-	}
-
-	@Id
-	@GeneratedValue(strategy = IDENTITY)
-
-	@Column(name = "id", unique = true, nullable = false)
-	public Integer getId() {
-		return this.id;
-	}
-
-	public void setId(Integer id) {
+	public Product(int id) {
 		this.id = id;
 	}
 
-	@Column(name = "name", nullable = false)
+	public Product(int id, String name, Integer price, Integer typeId, Integer quantity, Integer sale, String imgMain,
+			String img, Date createdDate) {
+		this.id = id;
+		this.name = name;
+		this.price = price;
+		this.typeId = typeId;
+		this.quantity = quantity;
+		this.sale = sale;
+		this.imgMain = imgMain;
+		this.img = img;
+		this.createdDate = createdDate;
+	}
+
+	@Id
+
+	@Column(name = "id", unique = true, nullable = false)
+	public int getId() {
+		return this.id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	@Column(name = "name")
 	public String getName() {
 		return this.name;
 	}
@@ -68,41 +66,31 @@ public class Product implements java.io.Serializable {
 		this.name = name;
 	}
 
-	@Column(name = "img")
-	public byte[] getImg() {
-		return this.img;
-	}
-
-	public void setImg(byte[] img) {
-		this.img = img;
-	}
-
-	@Column(name = "price", nullable = false)
-	public int getPrice() {
+	@Column(name = "price")
+	public Integer getPrice() {
 		return this.price;
 	}
 
-	public void setPrice(int price) {
+	public void setPrice(Integer price) {
 		this.price = price;
 	}
 
-	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name = "create-date", nullable = false, length = 19)
-	public Date getCreateDate() {
-		return this.createDate;
-	}
-
-	public void setCreateDate(Date createDate) {
-		this.createDate = createDate;
-	}
-
-	@Column(name = "type_id", nullable = false)
-	public int getTypeId() {
+	@Column(name = "type_id")
+	public Integer getTypeId() {
 		return this.typeId;
 	}
 
-	public void setTypeId(int typeId) {
+	public void setTypeId(Integer typeId) {
 		this.typeId = typeId;
+	}
+
+	@Column(name = "quantity")
+	public Integer getQuantity() {
+		return this.quantity;
+	}
+
+	public void setQuantity(Integer quantity) {
+		this.quantity = quantity;
 	}
 
 	@Column(name = "sale")
@@ -114,13 +102,32 @@ public class Product implements java.io.Serializable {
 		this.sale = sale;
 	}
 
-	@Column(name = "quantity")
-	public Integer getQuantity() {
-		return this.quantity;
+	@Column(name = "img_main")
+	public String getImgMain() {
+		return this.imgMain;
 	}
 
-	public void setQuantity(Integer quantity) {
-		this.quantity = quantity;
+	public void setImgMain(String imgMain) {
+		this.imgMain = imgMain;
+	}
+
+	@Column(name = "img")
+	public String getImg() {
+		return this.img;
+	}
+
+	public void setImg(String img) {
+		this.img = img;
+	}
+
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column(name = "created_date", length = 19)
+	public Date getCreatedDate() {
+		return this.createdDate;
+	}
+
+	public void setCreatedDate(Date createdDate) {
+		this.createdDate = createdDate;
 	}
 
 }

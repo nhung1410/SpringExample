@@ -32,6 +32,7 @@ public class ProductService {
 	    productDB.setQuantity(product.getQuantity());
 	    productDB.setTypeId(product.getTypeId());
 	    productDB.setImg(product.getImg());
+	    productDB.setImgMain(product.getImgMain());
 	    productDB.setSale(product.getSale());
 	    productDAO.persist(productDB);
 	  }

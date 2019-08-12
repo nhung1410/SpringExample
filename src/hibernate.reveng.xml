@@ -2,9 +2,9 @@
 <!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
 
 <hibernate-reverse-engineering>
-  <table-filter match-catalog="shop" match-name="category"/>
+  <table-filter match-catalog="shop" match-name="customer"/>
+  <table-filter match-catalog="shop" match-name="order"/>
+  <table-filter match-catalog="shop" match-name="order_detail"/>
   <table-filter match-catalog="shop" match-name="product"/>
   <table-filter match-catalog="shop" match-name="type"/>
-  <table-filter match-catalog="shop" match-name="user"/>
-  <table-filter match-schema="shop" match-name=".*"/>
 </hibernate-reverse-engineering>

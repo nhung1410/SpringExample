@@ -8,6 +8,6 @@ public class DashboardController {
 
 	@RequestMapping(value="/dashboard")
 	public String dashboard() {
-		return "admin/dashboard/dashboard";
+		return "dashboard";
 	}
 }

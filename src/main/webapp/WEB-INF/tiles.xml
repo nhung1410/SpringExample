@@ -7,29 +7,28 @@
 		template="/WEB-INF/views/layout/layout-dispatcher.jsp">
 		<put-attribute name="title" value="index" />
 		<put-attribute name="body"
-			value="/WEB-INF/views/jsp/user/index/_home.jsp" />
+			value="/WEB-INF/views/jsp/user/home.jsp" />
 		<put-attribute name="header"
 			value="/WEB-INF/views/layout/header.jsp" />
 		<put-attribute name="banner"
 			value="/WEB-INF/views/layout/banner.jsp" />
 		<put-attribute name="footer"
 			value="/WEB-INF/views/layout/footer.jsp" />
-	</definition>
-	<!-- HOME PAGE -->
-	<definition name="home" extends="index">
-		<put-attribute name="title" value="home" />
-		<put-attribute name="body"
-			value="/WEB-INF/views/jsp/user/home.jsp" />
-	</definition>
+	</definition>	
 	<!-- LOGIN PAGE -->
 	<definition name="login" extends="index">
 		<put-attribute name="title" value="index" />
-		<put-attribute name="body" value="/WEB-INF/views/jsp/user/index/_login.jsp" />		
+		<put-attribute name="body" value="/WEB-INF/views/jsp/user/login.jsp" />		
 	</definition>
-	<!-- SIGN UP PAGE -->
-	<definition name="signUp" extends="index">
+	<!-- REGISTER PAGE -->
+	<definition name="register" extends="index">
 		<put-attribute name="title" value="index" />
-		<put-attribute name="body" value="/WEB-INF/views/jsp/user/index/_register.jsp" />		
+		<put-attribute name="body" value="/WEB-INF/views/jsp/user/register.jsp" />		
+	</definition>
+	<!-- CART PAGE -->
+	<definition name="cart" extends="index">
+		<put-attribute name="title" value="index" />
+		<put-attribute name="body" value="/WEB-INF/views/jsp/user/cart.jsp" />		
 	</definition>
 	
 	<!-- ADMIN PAGE -->
@@ -40,37 +39,37 @@
 			value="/WEB-INF/views/layout/admin/header.jsp" />
 		<put-attribute name="menu"
 			value="/WEB-INF/views/layout/admin/menu.jsp" />
-		<put-attribute name="body" value="/WEB-INF/views/jsp/admin/dashboard/index/_dashboard.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/jsp/admin/dashboard/dashboard.jsp" />
 		<put-attribute name="footer" value="/WEB-INF/views/layout/admin/footer.jsp" />
 	</definition>
 	
 	<!-- PRODUCT PAGE -->
 	<definition name="product-list" extends="dashboard">
 		<put-attribute name="title" value="dashboard" />
-		<put-attribute name="body" value="/WEB-INF/views/jsp/admin/product/index/_list.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/jsp/admin/product/product-list.jsp" />
 	</definition>
 	
 	<!-- PRODUCT INSERT -->
 	<definition name="product-insert" extends="dashboard">
 		<put-attribute name="title" value="dashboard" />
-		<put-attribute name="body" value="/WEB-INF/views/jsp/admin/product/index/_insert.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/jsp/admin/product/product-insert.jsp" />
 	</definition>
 	
 	<!-- PRODUCT TYPE -->
 	<definition name="productType-list" extends="dashboard">
 		<put-attribute name="title" value="dashboard" />
-		<put-attribute name="body" value="/WEB-INF/views/jsp/admin/productType/index/_list.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/jsp/admin/productType/productType-list.jsp" />
 	</definition>
 	
 	<!-- PRODUCT TYPE INSERT -->
 	<definition name="productType-insert" extends="dashboard">
 		<put-attribute name="title" value="dashboard" />
-		<put-attribute name="body" value="/WEB-INF/views/jsp/admin/productType/index/_insert.jsp"/>	
+		<put-attribute name="body" value="/WEB-INF/views/jsp/admin/productType/productType-insert.jsp"/>	
 	</definition>
 	
 	<!-- PRODUCT TYPE UPDATE -->
 	<definition name="productType-update" extends="dashboard">
 		<put-attribute name="title" value="dashboard" />
-		<put-attribute name="body" value="/WEB-INF/views/jsp/admin/productType/index/_update.jsp"/>	
+		<put-attribute name="body" value="/WEB-INF/views/jsp/admin/productType/productType-update.jsp"/>	
 	</definition>
 </tiles-definitions>

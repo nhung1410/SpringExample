@@ -12,17 +12,17 @@ import org.springframework.web.servlet.view.RedirectView;
 public class HomeController {
 	@RequestMapping(value="/", method = RequestMethod.GET)
 	public String homepage() {
-//		return "user/home";
-		return "admin/dashboard/dashboard";
+//		return "index";
+		return "dashboard";
 	}
 	@RequestMapping(value="/home", method = RequestMethod.GET)
 	public String home() {
-		return "user/home";
+		return "home";
 	}
 	
 	@RequestMapping("/login-form")
 	public String showLoginForm() {
-		return "user/login";
+		return "login";
 	}
 
 	@RequestMapping("/login")

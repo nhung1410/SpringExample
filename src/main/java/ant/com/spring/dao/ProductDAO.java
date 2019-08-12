@@ -29,6 +29,6 @@ public class ProductDAO {
 	}
 	
 	public List<Product> findAll(){
-		return entityManager.createQuery("FROM product", Product.class).getResultList();
+		return entityManager.createQuery("from Product", Product.class).getResultList();
 	}
 }

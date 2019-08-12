@@ -31,31 +31,31 @@
 								<tr>
 									<th>no</th>
 									<th>name</th>
-									<th>brand</th>
 									<th>action</th>
 								</tr>
 							</thead>
 							<tbody>
-									<c:forEach var="type" items="${listType}" >
-										<tr class="tr-shadow">
-											<td>1</td>
-											<td class="desc">${type.name}</td>
-											<td class="desc">${type.brand }</td>
-											<td>
-												<div class="table-data-feature">
-													<button class="item" data-toggle="tooltip"
-														data-placement="top" title="" data-original-title="Edit">
-														<a href="productType-update"><i class="zmdi zmdi-edit"></i></a>
-													</button>
-													<button class="item" data-toggle="tooltip"
-														data-placement="top" title="" data-original-title="Delete">
-														<i class="zmdi zmdi-delete"></i>
-													</button>
-												</div>
-											</td>
-										</tr>
-										<tr class="spacer"></tr>
-									</c:forEach>
+								<c:forEach var="type" items="${listType}">
+									<tr class="tr-shadow">
+										<td>1</td>
+										<td class="desc">${type.name}</td>
+										<td>
+											<div class="table-data-feature">
+												<button class="item" data-toggle="tooltip"
+													data-placement="top" title="" data-original-title="Edit">
+													<a href="productType-update/${type.id}"><i
+														class="zmdi zmdi-edit"></i></a>
+												</button>
+												<button class="item" data-toggle="tooltip"
+													data-placement="top" title="" data-original-title="Delete">
+													<a href="deleteProductType/${type.id}"><i
+														class="zmdi zmdi-delete"></i></a>
+												</button>
+											</div>
+										</td>
+									</tr>
+									<tr class="spacer"></tr>
+								</c:forEach>
 							</tbody>
 						</table>
 					</div>

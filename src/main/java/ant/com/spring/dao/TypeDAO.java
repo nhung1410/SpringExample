@@ -15,21 +15,35 @@ import ant.com.spring.entities.Type;
 public class TypeDAO {
 	@PersistenceContext
 	private EntityManager entityManager;
-	
+
 	public void persist(final Type type) {
-		entityManager.persist(type);
+		try {
+			
+			entityManager.persist(type);
+		} catch (RuntimeException e) {
+			e.printStackTrace();
+		}
+
 	}
-	
+
 	public Type findById(final int id) {
 		return entityManager.find(Type.class, id);
 	}
-	
+
 	public void delete(final Type type) {
 		entityManager.remove(type);
 	}
-	
-	public List<Type> findAll(){
-		return entityManager.createQuery("FROM type", Type.class).getResultList();
+
+	public List<Type> findAll() {
+
+		List<Type> list = null;
+		try {
+			list = entityManager.createQuery(" from Type", Type.class).getResultList();
+		} catch (RuntimeException e) {
+			e.printStackTrace();
+		}
+		return list;
+
 	}
 
 }

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 9, 2019 10:48:01 AM by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="ant.com.spring.entities.Product" table="product" catalog="shop" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="string">
+            <column name="name" />
+        </property>
+        <property name="price" type="java.lang.Integer">
+            <column name="price" />
+        </property>
+        <property name="typeId" type="java.lang.Integer">
+            <column name="type_id" />
+        </property>
+        <property name="quantity" type="java.lang.Integer">
+            <column name="quantity" />
+        </property>
+        <property name="sale" type="java.lang.Integer">
+            <column name="sale" />
+        </property>
+        <property name="imgMain" type="string">
+            <column name="img_main" />
+        </property>
+        <property name="img" type="string">
+            <column name="img" />
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="created_date" length="19" />
+        </property>
+    </class>
+</hibernate-mapping>

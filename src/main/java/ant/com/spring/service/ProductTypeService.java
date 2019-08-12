@@ -13,29 +13,44 @@ import ant.com.spring.entities.Type;
 @Transactional
 public class ProductTypeService {
 
-	 @Autowired
-	  private TypeDAO typeDAO;
-	  public List<Type> findAll() {
-	    return typeDAO.findAll();
-	  }
-	  public Type findById(final int id) {
-	    return typeDAO.findById(id);
-	  }
-	  public void save(final Type type) {
-	    // check if type exist -> throw exception
-	    typeDAO.persist(type);
-	  }
-	  public void update(final Type type) {
-	    // if typeDB = null -> throw Exception
-	    Type typeDB = typeDAO.findById(type.getId());
-	    typeDB.setName(type.getName());
-	    typeDB.setBrand(type.getBrand());
-	    typeDAO.persist(typeDB);
-	  }
-	  public void delete(final int id) {
-	    Type type = typeDAO.findById(id);
-	    if (type != null) {
-	      typeDAO.delete(type);
-	    }
-	  }
+	@Autowired
+	private TypeDAO typeDAO;
+
+	public List<Type> findAll() {
+		return typeDAO.findAll();
+	}
+
+	public Type findById(final int id) {
+		return typeDAO.findById(id);
+	}
+
+	public void save(final Type type) {
+
+		typeDAO.persist(type);
+
+	}
+
+	public void update(final Type type) {
+		try {
+			Type typeDB = typeDAO.findById(type.getId());
+
+			typeDB.setName(type.getName());
+			typeDAO.persist(typeDB);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+	public void delete(final int id) {
+		try {
+			Type type = typeDAO.findById(id);
+			typeDAO.delete(type);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
 }
