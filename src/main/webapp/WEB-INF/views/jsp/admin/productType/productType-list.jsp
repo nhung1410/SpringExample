@@ -38,9 +38,9 @@
 								</tr>
 							</thead>
 							<tbody>
-								<c:forEach var="type" items="${listType}">
+								<c:forEach var="type" items="${listType}">	
 									<tr class="tr-shadow">
-										<td>1</td>
+										<td></td>
 										<td class="desc">${type.name}</td>
 										<td>
 
@@ -59,6 +59,7 @@
 										</td>
 									</tr>
 									<tr class="spacer"></tr>
+									
 								</c:forEach>
 							</tbody>
 						</table>

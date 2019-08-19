@@ -4216,6 +4216,7 @@ section {
 /* ----- Table ----- */
 .table {
     margin: 0;
+    
 }
 
 .table-responsive.table--no-card {
@@ -4479,6 +4480,7 @@ section {
 }
 
 .table-data2.table thead th {
+    
     font-size: 12px;
     color: #555;
     text-transform: uppercase;
@@ -4490,11 +4492,12 @@ section {
 }
 
 .table-data2.table thead th:first-child {
-    padding-right: 0;
+    padding-right: 0
 }
 
 .table-data2.table tbody {
     background: #fff;
+    
 }
 
 .table-data2.table tbody tr td:first-child {
@@ -4505,6 +4508,14 @@ section {
     -moz-border-radius-bottomleft: 3px;
     border-bottom-left-radius: 3px;
     vertical-align: top;
+}
+
+.table-data2.table tbody tr:not(:first-child) {
+    counter-increment: rowNumber;
+}
+
+.table-data2.table tbody tr:not(:first-child) td:first-child::before {
+    content: counter(rowNumber);
 }
 
 .table-data2.table tbody tr td:first-child .au-checkbox {
@@ -4553,6 +4564,7 @@ section {
     -webkit-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.03);
     -moz-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.03);
     box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.03);
+
 }
 
 .table-data__tool {

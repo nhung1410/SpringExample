@@ -5,9 +5,9 @@
 
 		<div class="fontawesome-list-wrap">
 			<h3 class="title-3 m-b-30">insert product type</h3>
-
 			<form:form action="insertProductType" method="post"
 				modelAttribute="type" class="form-horizontal">
+				
 				<div class="form-group">
 					<div class="col col-md-3">
 						<label for="select" class=" form-control-label">Name</label>
@@ -15,7 +15,9 @@
 					<div class=" col-md-9">
 						<form:input type="text" id="type-name" path="name"
 							placeholder="Enter product's name..." class="form-control" />
-						<span class="help-block">Please enter product's name</span>
+							<p>sdfs: ${message } </p>
+						<span class="help-block"></span>
+						<p></p>
 					</div>
 				</div>
 				<div class="card-footer">
