@@ -29,16 +29,15 @@ public class ProductService {
 	}
 
 	public void update(final Product product) {
-		// if productDB = null -> throw Exception
-		Product productDB = productDAO.findById(product.getId());
-		productDB.setName(product.getName());
-		productDB.setPrice(product.getPrice());
-		productDB.setQuantity(product.getQuantity());
-		productDB.setTypeId(product.getTypeId());
-		productDB.setImg(product.getImg());
-		productDB.setImgMain(product.getImgMain());
-		productDB.setSale(product.getSale());
-		productDAO.persist(productDB);
+			Product productDB = productDAO.findById(product.getId());
+			productDB.setName(product.getName());
+			productDB.setPrice(product.getPrice());
+			productDB.setQuantity(product.getQuantity());
+			productDB.setTypeId(product.getTypeId());
+			productDB.setImg(product.getImg());
+			productDB.setImgMain(product.getImgMain());
+			productDB.setSale(product.getSale());
+			productDAO.persist(productDB);
 	}
 
 	public void delete(final int id) {

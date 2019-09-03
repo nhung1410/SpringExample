@@ -1,4 +1,5 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <div class="main-content">
 	<div class="section__content section__content--p30">
 		<div class="container-fluid">
@@ -14,8 +15,9 @@
 								</button>
 							</a>
 						</div>
-						<div class="table-data__tool-right">
 
+						<c:url value="/product-update" var="product-update" />
+						<div class="table-data__tool-right">
 							<form class="form-header" action="" method="POST">
 								<input class="au-input au-input--xl" type="text" name="search"
 									placeholder="Search for datas &amp; reports...">
@@ -42,20 +44,24 @@
 								</tr>
 							</thead>
 							<tbody>
-								 <c:forEach items="${productList}" var="product"> 
+								<c:forEach items="${productList}" var="product">
 									<tr class="tr-shadow">
 										<td class="desc"></td>
-										<td class="desc">${product.id }</td>
+										<td class="desc">${product.id}</td>
 										<td class="desc">${product.name }</td>
-										<td class="desc">${product.type_id }</td>
-										<td>${product.img }</td>
-										<td class="desc">${product.quanity }</td>
+
+										<td class="desc">${product.typeId}</td>
+
+										<td></td>
+										<td class="desc">${product.quantity }</td>
 										<td class="desc">${product.price}</td>
 										<td class="desc">${product.sale}</td>
 										<td>
 											<div class="table-data-feature">
-												<button class="item" data-toggle="tooltip"
-													data-placement="top" title="" data-original-title="Edit">
+												<button
+													onclick="location.href='product-update?id=${product.id}'"
+													class="item" data-toggle="tooltip" data-placement="top"
+													title="" data-original-title="Edit">
 													<i class="zmdi zmdi-edit"></i>
 												</button>
 												<button class="item" data-toggle="tooltip"
@@ -65,8 +71,8 @@
 											</div>
 										</td>
 									</tr>
-									<tr class="spacer"></tr>
-								 </c:forEach>
+								</c:forEach>
+
 							</tbody>
 
 						</table>

@@ -17,7 +17,7 @@
 								<div class="col col-md-7">
 									<form:input path="name" placeholder="Enter product's name..."
 										class="form-control" />
-									<span class="help-block">${smgName}</span>
+									<span class="help-block"></span>
 								</div>
 							</div>
 							<div class="form-group row">
@@ -31,7 +31,7 @@
 											<form:option value="${type.id }">${type.name }</form:option>
 										</c:forEach>
 									</form:select>
-									<span class="help-block">${smgType}</span>
+									<span class="help-block"></span>
 								</div>
 							</div>
 							<div class="form-group row">
@@ -41,7 +41,7 @@
 								<div class="col col-md-4">
 									<form:input type="number" path="price"
 										placeholder="Enter product's price..." class="form-control" />
-									<span class="help-block">${smgPrice }</span>
+									<span class="help-block"></span>
 								</div>
 							</div>
 							<div class="row form-group">
@@ -66,7 +66,7 @@
 								<div class="col col-md-4">
 									<form:input type="number" path="quantity"
 										placeholder="Enter product's quantity..." class="form-control" />
-									<span class="help-block"></span>${smgQuantity }
+									<span class="help-block"></span>
 								</div>
 							</div>
 							<div class="form-group row">
@@ -76,7 +76,7 @@
 								<div class="col col-md-7">
 									<form:input type="file" path="imgMain"
 										placeholder="Enter product's image..." class="form-control" />
-									<span class="help-block">${msgImg}</span>
+									<span class="help-block"></span>
 								</div>
 							</div>
 

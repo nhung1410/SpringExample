@@ -55,6 +55,12 @@
 		<put-attribute name="body" value="/WEB-INF/views/jsp/admin/product/product-insert.jsp" />
 	</definition>
 	
+	<!-- PRODUCT UPDATE -->
+	<definition name="product-update" extends="dashboard">
+		<put-attribute name="title" value="dashboard" />
+		<put-attribute name="body" value="/WEB-INF/views/jsp/admin/product/product-update.jsp" />
+	</definition>
+	
 	<!-- PRODUCT TYPE -->
 	<definition name="productType-list" extends="dashboard">
 		<put-attribute name="title" value="dashboard" />

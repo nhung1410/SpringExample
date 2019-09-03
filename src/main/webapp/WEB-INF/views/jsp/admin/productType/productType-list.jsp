@@ -14,8 +14,9 @@
 								</button>
 							</a>
 						</div>
-						
+
 						<c:url value="/deleteProductType/" var="deleteProductType" />
+						<c:url value="/productType-update/" var="productType-update" />
 						<div class="table-data__tool-right">
 
 							<form class="form-header" action="" method="POST">
@@ -38,28 +39,30 @@
 								</tr>
 							</thead>
 							<tbody>
-								<c:forEach var="type" items="${listType}">	
+								<c:forEach var="type" items="${listType}">
 									<tr class="tr-shadow">
 										<td></td>
 										<td class="desc">${type.name}</td>
 										<td>
 
 											<div class="table-data-feature">
-												<button class="item" data-toggle="tooltip"
-													data-placement="top" title="" data-original-title="Edit">
-													<a href="productType-update/${type.id}"><i
-														class="zmdi zmdi-edit"></i></a>
-												</button>
-												<button class="item" data-toggle="tooltip"
-													data-placement="top" title="" data-original-title="Delete">
-													<a href="${type.id}"><i
-														class="zmdi zmdi-delete"></i></a>
-												</button>
+												<a href="productType-update?id=${type.id}">
+													<button class="item" data-toggle="tooltip"
+														data-placement="top" title="" data-original-title="Edit">
+														<i class="zmdi zmdi-edit"></i>
+													</button>
+												</a> <a href="deleteProductType?id=${type.id}"
+													onclick="return confirm('Are you sure');">
+													<button class="item" data-toggle="tooltip"
+														data-placement="top" title="" data-original-title="Delete">
+														<i class="zmdi zmdi-delete"></i>
+													</button>
+												</a>
 											</div>
 										</td>
 									</tr>
 									<tr class="spacer"></tr>
-									
+
 								</c:forEach>
 							</tbody>
 						</table>
